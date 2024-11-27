@@ -48,7 +48,7 @@ def clean(string):
 def count(haystack, needle):
     haystack = _string_sanity_check(haystack)
     needle = _string_sanity_check(needle)
-    if needle is '' or needle is None:
+    if needle == '' or needle is None:
         return 0
     return haystack.count(needle)
 
@@ -68,7 +68,7 @@ def dasherize(string):
 
 def decapitalize(string):
     sanitzed_string = _string_sanity_check(string)
-    if sanitzed_string is '' or sanitzed_string is None:
+    if sanitzed_string == '' or sanitzed_string is None:
         return ''
     return sanitzed_string[0].lower() + sanitzed_string[1:]
 
@@ -78,7 +78,7 @@ def decapitalize(string):
 
 def dedent(string):
     sanitzed_string = _string_sanity_check(string)
-    if sanitzed_string is '' or sanitzed_string is None:
+    if sanitzed_string == '' or sanitzed_string is None:
         return ''
     return textwrap.dedent(sanitzed_string)
 
@@ -113,7 +113,7 @@ def escape_html(haystack):
 
 
 def humanize(string):
-    if string is '' or string is None:
+    if string == '' or string is None:
         return ''
     sanitzed_string = _string_sanity_check(string)
     underscored = underscore(sanitzed_string)
